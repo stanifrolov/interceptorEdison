@@ -1,0 +1,56 @@
+{
+  "project": {
+    "projectSettingsVersion": "2.0.0",
+    "initialAutoPluginCount": 0,
+    "currentBuildConfiguration": null,
+    "projectFiles": {},
+    "projectDirectories": {}
+  },
+  "iot-tab": {
+    "fileStatus": {
+      "icon.png": {
+        "previousModTime": 1460145402752,
+        "modified": 1460145402752,
+        "seen": true,
+        "name": "icon.png"
+      },
+      "interceptorAnalogReadTest.xdk": {
+        "previousModTime": 1460145403151,
+        "modified": 1460145403151,
+        "seen": true,
+        "name": "interceptorAnalogReadTest.xdk"
+      },
+      "interceptorAnalogReadTest.xdke": {
+        "previousModTime": 1460152573585,
+        "modified": 1460152573585,
+        "seen": true,
+        "name": "interceptorAnalogReadTest.xdke"
+      },
+      "main.js": {
+        "previousModTime": 1460152572668,
+        "modified": 1460152572668,
+        "seen": true,
+        "name": "main.js"
+      },
+      "package.json": {
+        "previousModTime": 1460145402750,
+        "modified": 1460145402750,
+        "seen": true,
+        "name": "package.json"
+      },
+      "README.md": {
+        "previousModTime": 1460145402751,
+        "modified": 1460145402751,
+        "seen": true,
+        "name": "README.md"
+      },
+      "xdk/project-info.json": {
+        "previousModTime": 1460145403125,
+        "modified": 1460145403125,
+        "seen": true,
+        "name": "xdk/project-info.json"
+      }
+    },
+    "boardFileStatus": {}
+  }
+}

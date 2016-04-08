@@ -21,14 +21,14 @@
         "name": "interceptorAnalogReadTest.xdk"
       },
       "interceptorAnalogReadTest.xdke": {
-        "previousModTime": 1460152573585,
-        "modified": 1460152573585,
+        "previousModTime": 1460152803544,
+        "modified": 1460152803544,
         "seen": true,
         "name": "interceptorAnalogReadTest.xdke"
       },
       "main.js": {
-        "previousModTime": 1460152572668,
-        "modified": 1460152572668,
+        "previousModTime": 1460154530334,
+        "modified": 1460154530334,
         "seen": true,
         "name": "main.js"
       },
@@ -51,6 +51,10 @@
         "name": "xdk/project-info.json"
       }
     },
-    "boardFileStatus": {}
+    "boardFileStatus": {
+      "main.js": {
+        "previousModTime": 1460154531359
+      }
+    }
   }
 }

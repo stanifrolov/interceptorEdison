@@ -89,9 +89,9 @@ setInterval(function(){
     var knockSensorValue = knockSensor.read(); //read the value of the analog pin
     //console.log("Knock: ", knockSensorValue); //write the value of the analog pin to the console
 
-    //io.emit('lightValue', lightValue);
-    //io.emit('highSensitiveVoiceValue', highSensitiveVoiceValue)
+    io.emit('lightValue', lightValue);
+    io.emit('highSensitiveVoiceValue', highSensitiveVoiceValue)
     io.emit('shockSwitchValue', shockSwitchValue)
-    //io.emit('knockSensorValue', knockSensorValue)
-    //io.emit('microSensorValue', microSensorValue)
+    io.emit('knockSensorValue', knockSensorValue)
+    io.emit('microSensorValue', microSensorValue)
 },100);

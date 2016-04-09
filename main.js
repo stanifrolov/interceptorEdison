@@ -72,33 +72,37 @@ http.listen(3000, function(){
 
 var photoResistor = new mraa.Aio(0); //setup access analog input Analog pin #0 (A0)
 var highSensitiveVoiceSensor = new mraa.Aio(1); //setup access analog input Analog pin #1 (A1)
-var shockSwitchSensor = new mraa.Aio(2); //setup access analog input Analog pin #2 (A2)
-var knockSensor = new mraa.Aio(3); //setup access analog input Analog pin #3 (A3)
-var microSensor = new mraa.Aio(4); //setup access analog input Analog pin #4 (A4)
+
+var shockSwitchSensor = new mraa.Gpio(8); //setup access analog input Analog pin #2 (A2)
+shockSwitchSensor.dir(mraa.DIR_IN); //set the gpio direction to input
+
+var knockSensor = new mraa.Gpio(7); //setup access analog input Analog pin #2 (A2)
+knockSensor.dir(mraa.DIR_IN);
+//var microSensor = new mraa.Aio(0); //setup access analog input Analog pin #4 (A4)
 
 
 function getSensors() {
 	
-	var lightValue = photoResistor.read(); //read the value of the analog pin
-    //console.log("Light: ", lightValue); //write the value of the analog pin to the console
+	var lightValue = photoResistor.readFloat(); //read the value of the analog pin
+    console.log("Light: ", lightValue); //write the value of the analog pin to the console
 
-    var highSensitiveVoiceValue = highSensitiveVoiceSensor.read(); //read the value of the analog pin
-    //console.log("highSens: ", highSensitiveVoiceValue); //write the value of the analog pin to the console
+    var     highSensitiveVoiceValue = highSensitiveVoiceSensor.readFloat(); //read the value of the analog pin
+    console.log("highSens: ", highSensitiveVoiceValue); //write the value of the analog pin to the console
 
-    var microSensorValue = microSensor.read(); //read the value of the analog pin
+    //var microSensorValue = microSensor.read(); //read the value of the analog pin
     //console.log("Micro: ", microSensorValue); //write the value of the analog pin to the console
 
     var shockSwitchValue = shockSwitchSensor.read(); //read the value of the analog pin
-    //console.log("Shock: ", shochSwitchValue); //write the value of the analog pin to the console
+    console.log("Shock: ", shockSwitchValue); //write the value of the analog pin to the console
 
     var knockSensorValue = knockSensor.read(); //read the value of the analog pin
-    //console.log("Knock: ", knockSensorValue); //write the value of the analog pin to the console
+    console.log("Knock: ", knockSensorValue); //write the value of the analog pin to the console
 
     io.emit('lightValue', lightValue);
     io.emit('highSensitiveVoiceValue', highSensitiveVoiceValue);
     io.emit('shockSwitchValue', shockSwitchValue);
     io.emit('knockSensorValue', knockSensorValue);
-    io.emit('microSensorValue', microSensorValue);
+    //io.emit('microSensorValue', microSensorValue);
     setTimeout(getSensors, 500);
 }
 getSensors();

@@ -1,3 +1,7 @@
+/*jslint node:true, vars:true, bitwise:true, unparam:true */
+/*jshint unused:true */
+// Leave the above lines for propper jshinting
+
 var mraa = require('mraa'); //require mraa
 console.log('MRAA Version: ' + mraa.getVersion()); //write the mraa version to the Intel XDK console
 //var myOnboardLed = new mraa.Gpio(3, false, true); //LED hooked up to digital pin (or built in pin on Galileo Gen1)
@@ -69,10 +73,11 @@ http.listen(3000, function(){
 var photoResistor = new mraa.Aio(0); //setup access analog input Analog pin #0 (A0)
 var highSensitiveVoiceSensor = new mraa.Aio(1); //setup access analog input Analog pin #1 (A1)
 var shockSwitchSensor = new mraa.Aio(2); //setup access analog input Analog pin #2 (A2)
-var knockSensor = new mraa.Aio(3); //setup access analog input Analog pin #2 (A3)
-var microSensor = new mraa.Aio(4); //setup access analog input Analog pin #2 (A3)
+var knockSensor = new mraa.Aio(3); //setup access analog input Analog pin #3 (A3)
+var microSensor = new mraa.Aio(4); //setup access analog input Analog pin #4 (A4)
 
-setInterval(function(){
+
+function getSensors() {
 	
 	var lightValue = photoResistor.read(); //read the value of the analog pin
     //console.log("Light: ", lightValue); //write the value of the analog pin to the console
@@ -80,7 +85,7 @@ setInterval(function(){
     var highSensitiveVoiceValue = highSensitiveVoiceSensor.read(); //read the value of the analog pin
     //console.log("highSens: ", highSensitiveVoiceValue); //write the value of the analog pin to the console
 
-    var microSensorValue = highSensitiveVoiceSensor.read(); //read the value of the analog pin
+    var microSensorValue = microSensor.read(); //read the value of the analog pin
     //console.log("Micro: ", microSensorValue); //write the value of the analog pin to the console
 
     var shockSwitchValue = shockSwitchSensor.read(); //read the value of the analog pin
@@ -90,8 +95,10 @@ setInterval(function(){
     //console.log("Knock: ", knockSensorValue); //write the value of the analog pin to the console
 
     io.emit('lightValue', lightValue);
-    io.emit('highSensitiveVoiceValue', highSensitiveVoiceValue)
-    io.emit('shockSwitchValue', shockSwitchValue)
-    io.emit('knockSensorValue', knockSensorValue)
-    io.emit('microSensorValue', microSensorValue)
-},100);
+    io.emit('highSensitiveVoiceValue', highSensitiveVoiceValue);
+    io.emit('shockSwitchValue', shockSwitchValue);
+    io.emit('knockSensorValue', knockSensorValue);
+    io.emit('microSensorValue', microSensorValue);
+    setTimeout(getSensors, 500);
+}
+getSensors();

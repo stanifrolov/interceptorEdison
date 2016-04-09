@@ -9,51 +9,51 @@
   "iot-tab": {
     "fileStatus": {
       "icon.png": {
-        "previousModTime": 1460145402752,
-        "modified": 1460145402752,
+        "previousModTime": 1460155056000,
+        "modified": 1460155056000,
         "seen": true,
         "name": "icon.png"
       },
       "interceptorAnalogReadTest.xdk": {
-        "previousModTime": 1460145403151,
-        "modified": 1460145403151,
+        "previousModTime": 1460155056000,
+        "modified": 1460155056000,
         "seen": true,
         "name": "interceptorAnalogReadTest.xdk"
       },
       "interceptorAnalogReadTest.xdke": {
-        "previousModTime": 1460152803544,
-        "modified": 1460152803544,
+        "previousModTime": 1460155989000,
+        "modified": 1460155989000,
         "seen": true,
         "name": "interceptorAnalogReadTest.xdke"
       },
       "main.js": {
-        "previousModTime": 1460154530334,
-        "modified": 1460154530334,
+        "previousModTime": 1460156056000,
+        "modified": 1460156056000,
         "seen": true,
         "name": "main.js"
       },
       "package.json": {
-        "previousModTime": 1460145402750,
-        "modified": 1460145402750,
+        "previousModTime": 1460155056000,
+        "modified": 1460155056000,
         "seen": true,
         "name": "package.json"
       },
       "README.md": {
-        "previousModTime": 1460145402751,
-        "modified": 1460145402751,
+        "previousModTime": 1460155056000,
+        "modified": 1460155056000,
         "seen": true,
         "name": "README.md"
       },
       "xdk/project-info.json": {
-        "previousModTime": 1460145403125,
-        "modified": 1460145403125,
+        "previousModTime": 1460155056000,
+        "modified": 1460155056000,
         "seen": true,
         "name": "xdk/project-info.json"
       }
     },
     "boardFileStatus": {
       "main.js": {
-        "previousModTime": 1460154531359
+        "previousModTime": 1460156058827
       }
     }
   }
